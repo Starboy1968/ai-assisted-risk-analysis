@@ -1,0 +1,16 @@
+You are a third-party risk analyst. Assess the scenario below for a risk register.
+
+For each risk give:
+- a risk title and short description
+- likelihood (1-5) and impact (1-5) and score (L x I)
+- controls (preventive, detective, corrective) with an owner
+- KRIs
+- the relevant NIST CSF and ISO 27001 controls
+
+Scale: 1 = very low, 5 = very high. Bands: 20-25 Critical, 10-16 High, 5-9 Medium, 1-4 Low.
+
+Finish with a risk register table with columns:
+ID | Risk | L | I | Score | Rating | Controls | Owner | KRIs | Framework
+
+Inputs:
+[structured inputs from worked-example/01-input.md pasted here]

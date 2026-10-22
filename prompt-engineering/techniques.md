@@ -1,0 +1,22 @@
+# Prompting techniques used, and what each one changed
+
+Each technique below is tied to a specific change in the prompt and the effect seen in the saved outputs of this project's runs ([run 1](../worked-example/iteration-runs/run-1-v1-prompt-output.md), [run 2](../worked-example/iteration-runs/run-2-v2-prompt-output.md), [run 3](../worked-example/02-raw-ai-output.md)). Effects are what was observed on this one scenario, not a general claim.
+
+| Technique | Concrete change in the prompt | Effect observed |
+|---|---|---|
+| **Role-setting** | v2 added "You are a third-party risk analyst"; v3 sharpened it to "write for a risk register a control owner must act on ... a first draft for a human analyst; you do not make the final call." | Run 1 ended with a sales line ("benefits ... outweigh the risks"). Runs 2 and 3 stayed in analyst voice; run 3 made no go/no-go call and listed questions for the reviewer instead. |
+| **Structured inputs** | v3 has a fixed Inputs block (org profile, scope, scenario, existing controls, risk appetite, frameworks, constraints), with "write 'unknown', don't delete". | Run 3 used the existing controls to compute residual scores and compared every residual with the stated appetite, which runs 1 and 2 never did. |
+| **Specificity: defined scale** | v2's "1 = very low, 5 = very high" became v3's worded 1-5 scale (same as the companion project), bands, and a required one-line rationale. | Run 2 gave numbers with no reasons (e.g. prompt injection 4 x 5). Run 3 gave a rationale per rating, which is what made the inflated R4 impact visible in review. |
+| **Specificity: output schema** | v3 fixes headings A-H, a ratings table, a controls table, KRIs with thresholds, and an exact CSV header. | Run 3 returned a CSV block with the exact header that parses cleanly (header + 8 rows, 17 fields each), so it can go straight into a spreadsheet or GRC tool. |
+| **Specificity: quality bar for controls** | Rule 4: name action, object, frequency/trigger, owner role; "implement strong access controls" given as an unacceptable example. | Run 1: almost all controls generic. Run 3: one vague control left out of 20 (R6), caught in review. |
+| **Statement format** | "Because [cause], [event] may occur, leading to [consequence]." | Run 1 listed categories ("Compliance Risk"). Run 3 produced 8 ownable statements; the format also exposed the R5/R8 duplicate (same event, different cause). |
+| **Constraints / guardrails** | Rule 1: never invent stats, incidents, citations or clause IDs; map at function level and mark "[verify ID]". | Run 2 cited CSF 1.1 and ISO 27001:2013 IDs as if current. Run 3 invented none and flagged four for checking; all four checked out. It did state one ID (OWASP LLM01:2025) without the flag, which review verified. |
+| **Flag assumptions, ask for missing context** | Rules 2-3: number assumptions (A1...), ask questions (Q1...) when a missing input would move a rating by more than one point. | Run 3 raised the unnamed model provider (A2/Q1) and asked whether portal bank changes sync to the ERP (Q2). Q2 is what showed that its own R1 residual score was wrong. |
+| **Inherent / residual / target rule** | Rule 7: residual credits existing controls only; target is after proposed controls. | Run 3 separated the three scores. It still broke the rule twice (R1, R5), and review fixed both: evidence that the rule helps but is not enough. |
+| **Iteration** | Three versions, each revised from the diagnosed output of the last ([prompt evolution](prompt-evolution.md)). | Usable register by v3; each round's failures became a specific rule. |
+| **Self-critique (self-check)** | v3 ends with a checklist the AI must run before answering. | Most checks held in run 3. Two misses (a KRI with "-" as threshold; one unflagged ID) show self-checks reduce but do not remove errors. |
+| **Follow-up prompts** | Separate prompts to challenge ratings, map frameworks, write an exec summary, and draft a vendor questionnaire. | Keeps the main prompt focused; mapping is done as its own step so it can be verified on its own. |
+
+## What the techniques did not fix
+
+Judgment calls that needed the [human-review step](../worked-example/03-review-and-corrections.md): whether an existing control actually applies (R1), whether an impact rating matches what the system can do (R4), what is missing (exit risk, invoice splitting), and whether a framework ID is real. That is why the workflow ends with review, not with the AI.

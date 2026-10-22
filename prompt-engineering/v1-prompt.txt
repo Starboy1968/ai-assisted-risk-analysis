@@ -1,0 +1,3 @@
+Identify the risks in this scenario and suggest controls.
+
+[scenario from worked-example/01-input.md pasted here]
