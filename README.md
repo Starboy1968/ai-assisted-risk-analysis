@@ -63,9 +63,14 @@ All 11 corrections, plus a "what the AI did vs what review added" table: [03-rev
 
 > The worked example is **illustrative and fictional**: "Calder Fabrication Co." and "Vendor T" are made up. Ratings are analyst judgment, not measured data. All three AI runs were generated with an AI assistant and saved unedited; the review was done as part of this project's process and is pending the author's sign-off.
 
-## Related project
+## Related projects
 
-[AI Supply Chain Risk Assessment](https://github.com/Starboy1968/ai-supply-chain-risk-assessment): nine AI-related supply chain risks for an illustrative manufacturer, scored on the same 1-5 scale and bands, with controls, KRIs, framework mapping and a 30/60/90-day plan.
+- [AI Supply Chain Risk Assessment](https://github.com/Starboy1968/ai-supply-chain-risk-assessment): nine scored AI-related supply chain risks, with controls, warning indicators (KRIs) and a 30/60/90-day plan.
+- [Reading the Room: Power and Behavior Risk Indicators](https://github.com/Starboy1968/power-behavior-risk-indicators): observable signs of how power, incentives and group behavior shape risk decisions, and how to turn them into solid findings.
+- [Behavioral Supply Chain Risk: Human Factors, AI, and Audit](https://github.com/Starboy1968/behavioral-supply-chain-risk-audit-ai): how bias and pressure create supply chain risk, and how AI triage, audit evidence and human review help catch it.
+- [Playing the Risk Game: Game Theory for Supply Chain Risk and AI Governance](https://github.com/Starboy1968/supply-chain-ai-governance-strategy): plain-language game theory that explains why supply chain and AI risks persist, and which incentives to change.
+- [AI in Supply Chain Operations: A Strategist's Field Guide](https://github.com/Starboy1968/ai-in-supply-chain-operations): how a supply chain manager can use AI in six everyday jobs, and what to check before trusting it.
+- [Healthcare Cyber Risk Program: An OSINT Case Study](https://github.com/Starboy1968/healthcare-cyber-risk-osint-case-study): a cyber risk program for a fictional regional health system, built only from public sources.
 
 ## Author
 
