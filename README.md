@@ -71,6 +71,7 @@ All 11 corrections, plus a "what the AI did vs what review added" table: [03-rev
 - [Playing the Risk Game: Game Theory for Supply Chain Risk and AI Governance](https://github.com/Starboy1968/supply-chain-ai-governance-strategy): plain-language game theory that explains why supply chain and AI risks persist, and which incentives to change.
 - [AI in Supply Chain Operations: A Strategist's Field Guide](https://github.com/Starboy1968/ai-in-supply-chain-operations): how a supply chain manager can use AI in six everyday jobs, and what to check before trusting it.
 - [Healthcare Cyber Risk Program: An OSINT Case Study](https://github.com/Starboy1968/healthcare-cyber-risk-osint-case-study): a cyber risk program for a fictional regional health system, built only from public sources.
+- [AI for CISA and IT Auditors: Creative Workflow Accelerators](https://github.com/Starboy1968/ai-for-it-auditors): nine practical ways AI can speed up IT audit work, from walkthroughs and SOC 2 review to auditing AI, with a human check at every step.
 
 ## Author
 
