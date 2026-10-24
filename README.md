@@ -72,6 +72,7 @@ All 11 corrections, plus a "what the AI did vs what review added" table: [03-rev
 - [AI in Supply Chain Operations: A Strategist's Field Guide](https://github.com/Starboy1968/ai-in-supply-chain-operations): how a supply chain manager can use AI in six everyday jobs, and what to check before trusting it.
 - [Healthcare Cyber Risk Program: An OSINT Case Study](https://github.com/Starboy1968/healthcare-cyber-risk-osint-case-study): a cyber risk program for a fictional regional health system, built only from public sources.
 - [AI for CISA and IT Auditors: Creative Workflow Accelerators](https://github.com/Starboy1968/ai-for-it-auditors): nine practical ways AI can speed up IT audit work, from walkthroughs and SOC 2 review to auditing AI, with a human check at every step.
+- [ICM Assistant Workspace](https://github.com/Starboy1968/icm-assistant-workspace): a model-agnostic, five-layer folder workspace that guides any AI chat model through intake, research, drafting and review, with rules for copyright, wellbeing and fairness.
 
 ## Author
 
